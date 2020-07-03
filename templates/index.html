@@ -4,43 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Car Selling Price-Predictive Analysis</title>
 </head>
 
 <body>
 
-    <div style="color:blue">
+    <div style="color:red">
         <form action="{{ url_for('predict')}}" method="post">
-            <h2>Predictive analysis</h2>
-            <h3>Year</h3>
-            <input id="first" name="Year" type="number ">
-            <h3>What is the Showroom Price?(In lakhs)</h3><br><input id="second" name="Present_Price" required="required">
-            <h3>How Many Kilometers Drived?</h3><input id="third" name="Kms_Driven" required="required">
-            <h3>How much owners previously had the car(0 or 1 or 3) ?</h3><br><input id="fourth" name="Owner" required="required">
-            <h3>What Is the Fuel type?</h3><br><select name="Fuel_Type_Petrol" id="fuel" required="required">
+        <table align=center>
+        <tr><td colspan=2> <h1>Predictive analysis</h1></td><tr>
+        <tr><td><h3>Year :</h3></td><td><input id="first" name="Year" type="number "></td></tr>
+        <tr><td><h3>What is the Showroom Price?(In lakhs)</h3></td><td><input id="second" name="Present_Price" required="required"></td></tr>
+        <tr><td><h3>How Many Kilometers Drived?</td><td><input id="third" name="Kms_Driven" required="required"></td></tr>
+        <tr><td> <h3>How much owners previously had the car(0 or 1 or 3) ?</td><td><input id="fourth" name="Owner" required="required"></td></tr>
+        <tr><td><h3>What Is the Fuel type?</td><td><select name="Fuel_Type_Petrol" id="fuel" required="required">
                 <option value="Petrol">Petrol</option>
                 <option value="Diesel">Diesel</option>
                 <option value="CNG">CNG</option>
-            </select>
-            <h3>Are you A Dealer or Individual</h3><br><select name="Seller_Type_Individual" id="resea" required="required">
+            </select></td></tr>
+        <tr><td><h3>Are you A Dealer or Individual</td><td><select name="Seller_Type_Individual" id="resea" required="required">
                 <option value="Dealer">Dealer</option>
                 <option value="Individual">Individual</option>
-            </select>
-            <h3>Transmission type</h3><br><select name="Transmission_Mannual" id="research" required="required">
+            </select></td></tr>
+        <tr><td><h3>Transmission type</td><td><select name="Transmission_Mannual" id="research" required="required">
                 <option value="Mannual">Manual Car</option>
                 <option value="Automatic">Automatic Car</option>
-            </select>
-            <br><br><button id="sub" type="submit ">Calculate the Selling Price</button>
-            <br>
-
-
-
+            </select></td></tr>
+        <tr><td colspan=2><button id="sub" type="submit " >Calculate the Selling Price </button></td></tr>
+        </table>
+           
+             
 
         </form>
 
 
 
-        <br><br><h3>{{ prediction_text }}<h3>
+        <br><br><h1>{{ prediction_text }}<h1>
     </div>
 
 
@@ -48,7 +47,7 @@
 
     <style>
         body {
-            background-color: lightslategray;
+            background-color: #065654;
             text-align: center;
             padding: 0px;
         }
